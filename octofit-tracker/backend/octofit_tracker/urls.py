@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import JsonResponse
+import os
+
+
+# Obtener el nombre del codespace desde la variable de entorno
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME', '')
+BASE_URL = f"https://{CODESPACE_NAME}-8000.app.github.dev" if CODESPACE_NAME else "http://localhost:8000"
+
+def api_url_response(request, component):
+    url = f"{BASE_URL}/api/{component}/"
+    return JsonResponse({"url": url})
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/<str:component>/', api_url_response),
 ]
