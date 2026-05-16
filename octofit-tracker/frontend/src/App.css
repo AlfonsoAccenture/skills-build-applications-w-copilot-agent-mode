@@ -1,0 +1,75 @@
+.app-shell {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #1e2530;
+}
+
+body {
+  background: #f5f7fb;
+}
+
+.navbar-brand {
+  letter-spacing: 0.03em;
+}
+
+.navbar-nav .nav-link {
+  margin-left: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: #e9f4ff;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  z-index: 1040;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.modal-custom {
+  z-index: 1050;
+}
+
+.modal-content {
+  border-radius: 0.85rem;
+}
+
+pre {
+  background: #eef3fb;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  min-width: 120px;
+}
+
+.lead {
+  color: #525f7f;
+}
